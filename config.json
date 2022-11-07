@@ -1,0 +1,13 @@
+{
+  "name": "Kevin Sibata",
+  "job": "Analista de Marketing",
+  "github": "kevinsibata",
+
+  "playlists": {
+    "jogos": [
+      { "title": "asdasd", "url": "url", "thumb": "ttt" },
+      { "title": "asdasd 2", "url": "url2", "thumb": "ttt2" }
+    ],
+    "front-end": [{ "title": "asdasd", "url": "url", "thumb": "ttt" }]
+  }
+}
