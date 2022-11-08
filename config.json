@@ -2,12 +2,58 @@
   "name": "Kevin Sibata",
   "job": "Analista de Marketing",
   "github": "kevinsibata",
-
+  "banner": "https://images.unsplash.com/photo-1638613067237-b1127ef06c00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80",
   "playlists": {
-    "jogos": [
-      { "title": "asdasd", "url": "url", "thumb": "ttt" },
-      { "title": "asdasd 2", "url": "url2", "thumb": "ttt2" }
+    "Pokémon": [
+      {
+        "title": "Pokémon Scarlet e Pokémon Violet | Trailer de revelação",
+        "url": "https://www.youtube.com/watch?v=-yw6nMgk3cg",
+        "thumb": "https://i3.ytimg.com/vi/-yw6nMgk3cg/maxresdefault.jpg"
+      },
+      {
+        "title": "Pokémon Sword & Pokémon Shield - Overview Trailer - Nintendo Switch",
+        "url": "https://www.youtube.com/watch?v=fPO2ouGn0lA",
+        "thumb": "https://i3.ytimg.com/vi/fPO2ouGn0lA/maxresdefault.jpg"
+      },
+      {
+        "title": "Pokémon Omega Ruby and Pokémon Alpha Sapphire Animated Trailer",
+        "url": "https://www.youtube.com/watch?v=Vw6zP7n0ais",
+        "thumb": "https://i3.ytimg.com/vi/Vw6zP7n0ais/maxresdefault.jpg"
+      }
     ],
-    "front-end": [{ "title": "asdasd", "url": "url", "thumb": "ttt" }]
-  }
+    "ciência": [
+      {
+        "title": "Você consegue LEVANTAR TONELADAS! Descubra como",
+        "url": "https://www.youtube.com/watch?v=9HxJOcS5U3Y",
+        "thumb": "https://i3.ytimg.com/vi/9HxJOcS5U3Y/maxresdefault.jpg"
+      }
+    ]
+  },
+  "favorites": [
+    {
+      "channel": "The Official Pokémon YouTube channel",
+      "avatar": "https://yt3.ggpht.com/W1cjda8QWIIrnXRdeBZTzgbo0zdAWHvI9_MzhZspvES2W_olW82c4XVjCp4Czn8R0A9JvgmGPEg=s88-c-k-c0x00ffffff-no-rj",
+      "url": "https://www.youtube.com/c/pokemon"
+    },
+    {
+      "channel": "CybertronVGC",
+      "avatar": "https://yt3.ggpht.com/9giwZvrsNsD-fcTyqTkFumE-xi_eMdouweqLgWuB5J5rX4-CV8nXnpEK9eAbcc8TD0f9ytT3=s88-c-k-c0x00ffffff-no-rj",
+      "url": "https://www.youtube.com/c/pokemon"
+    },
+    {
+      "channel": "WolfeyVGC",
+      "avatar": "https://yt3.ggpht.com/OOXxZnMYS5zFjUiyFcUuPeiXGD3EqcmYznmybj4vxH1qcXRQgwovXxzN_3QRn1__CzWvb0_pAA=s88-c-k-c0x00ffffff-no-rj",
+      "url": "https://www.youtube.com/c/WolfeyVGC"
+    },
+    {
+      "channel": "Nerdologia",
+      "avatar": "https://yt3.ggpht.com/ytc/AMLnZu8zRDVvn571ZdX60WQnXZngKmUCfAXvAehukf0mOg=s88-c-k-c0x00ffffff-no-rj",
+      "url": "https://www.youtube.com/c/nerdologia"
+    },
+    {
+      "channel": "Manual do Mundo",
+      "avatar": "https://yt3.ggpht.com/-pJxUP1wezj8SREiWAyEzlusc9_PIiMp-QBa5OAmx8w2iHvczS_Krl-MAPYIidgcFy8lpI2L4ow=s88-c-k-c0x00ffffff-no-rj",
+      "url": "https://www.youtube.com/c/manualdomundo"
+    }
+  ]
 }
