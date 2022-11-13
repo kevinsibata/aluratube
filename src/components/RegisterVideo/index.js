@@ -29,9 +29,16 @@ const supabase = createClient(PROJECT_URL, PUBLIC_KEY);
 
 export default function RegisterVideo() {
   const formCadastro = useForm({
-    initialValues: { titulo: "", url: "", playlist: "Pokémon" },
+    initialValues: {
+      titulo: "",
+      url: "",
+      thumb: "",
+      playlist: "Pokémon",
+    },
   });
   const [formVisivel, setFormVisivel] = React.useState(false);
+  const [campoNovaPlaylistVisivel, setCampoNovaPlaylistVisivel] =
+    React.useState(false);
 
   return (
     <StyledRegisterVideo>
@@ -51,9 +58,12 @@ export default function RegisterVideo() {
               .insert({
                 title: formCadastro.values.titulo,
                 url: formCadastro.values.url,
+                thumb: formCadastro.values.thumb,
                 playlist: formCadastro.values.playlist,
               })
-              .then((resposta) => {})
+              .then((resposta) => {
+                window.location.reload();
+              })
               .catch((err) => {
                 console.log(err);
               });
@@ -82,18 +92,43 @@ export default function RegisterVideo() {
               value={formCadastro.values.url}
               onChange={formCadastro.handleChange}
             />
-            <select
-              id="playlist"
-              name="playlist"
-              form="registerVideoForm"
-              value={formCadastro.values.playlist}
+            <input
+              placeholder="Thumb do vídeo"
+              name="thumb"
+              value={formCadastro.values.thumb}
               onChange={formCadastro.handleChange}
-            >
-              <option selected="selected" value="Pokémon">
-                Pokémon
-              </option>
-              <option value="Ciência">Ciência</option>
-            </select>
+            />
+            {/* Possibilitar usuário de usar playlists já criadas ou então digitar uma nova*/}
+            {campoNovaPlaylistVisivel ? (
+              // Caso playlist Nova
+              <input
+                placeholder="Playlist"
+                name="playlist"
+                value={formCadastro.values.playlist}
+                onChange={formCadastro.handleChange}
+              />
+            ) : (
+              // Caso playlist já criada
+              <select
+                name="playlist"
+                form="registerVideoForm"
+                value={formCadastro.values.playlist}
+                onChange={(e) => {
+                  formCadastro.handleChange(e);
+
+                  if (e.target.value === "[Nova playlist]") {
+                    setCampoNovaPlaylistVisivel(true);
+                  }
+                }}
+              >
+                <option selected="selected" value="Pokémon">
+                  Pokémon
+                </option>
+                <option value="Ciência">Ciência</option>
+                <option value="[Nova playlist]">[Nova playlist]</option>
+              </select>
+            )}
+
             <button type="submit">Cadastrar</button>
           </div>
         </form>

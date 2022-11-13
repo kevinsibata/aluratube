@@ -104,8 +104,14 @@ function Timeline({ searchValue, ...propriedades }) {
             <div>
               {videos
                 .filter((video) => {
-                  const titleNormalized = video.title.toLowerCase();
-                  const searchValueNormalized = searchValue.toLowerCase();
+                  const titleNormalized = video.title
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "");
+                  const searchValueNormalized = searchValue
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "");
                   return titleNormalized.includes(searchValueNormalized);
                 })
                 .map((video) => {
