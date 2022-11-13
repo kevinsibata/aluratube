@@ -153,6 +153,9 @@ const StyledFavorites = styled.div`
     width: 100px;
     align-items: center;
     text-align: center;
+    span {
+      color: ${({ theme }) => theme.textColorBase || "#222222"};
+    }
   }
   img {
     border-radius: 50%;
