@@ -1,3 +1,4 @@
+import { createClient } from "@supabase/supabase-js";
 import React from "react";
 import { StyledRegisterVideo } from "./styles";
 
@@ -21,6 +22,11 @@ function useForm(propsDoForm) {
   };
 }
 
+const PROJECT_URL = "https://vicjngiwpmgiaveolcww.supabase.co";
+const PUBLIC_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZpY2puZ2l3cG1naWF2ZW9sY3d3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjgyOTY2MTcsImV4cCI6MTk4Mzg3MjYxN30.6RgVlkETTl5EBAK5_kgX0Vhwu2ZpbHFSmyMdRRbCh24";
+const supabase = createClient(PROJECT_URL, PUBLIC_KEY);
+
 export default function RegisterVideo() {
   const formCadastro = useForm({ initialValues: { titulo: "", url: "" } });
   const [formVisivel, setFormVisivel] = React.useState(false);
@@ -36,6 +42,19 @@ export default function RegisterVideo() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
+
+            supabase
+              .from("videos")
+              .insert({
+                title: formCadastro.values.titulo,
+                url: formCadastro.values.url,
+                playlist: "Pokémon",
+              })
+              .then((resposta) => {})
+              .catch((err) => {
+                console.log(err);
+              });
+
             setFormVisivel(false);
             formCadastro.clearForm();
           }}
